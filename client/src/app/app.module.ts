@@ -11,10 +11,6 @@ import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
 import {HttpModule} from '@angular/http';
 import {MaterialDesign} from "./material.module";
-import {MatIconModule} from "@angular/material";
-import {MatInputModule} from "@angular/material";
-import {MatCheckboxModule} from "@angular/material";
-import {MatSelectModule} from "@angular/material";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const routes: Routes = [
@@ -34,7 +30,6 @@ const routes: Routes = [
     CommonModule,
     MaterialDesign,
     BrowserAnimationsModule,
-    MatInputModule,
     HttpClientModule,
     DataTableModule.forRoot(),
     RouterModule.forRoot(routes , {onSameUrlNavigation: 'reload'})

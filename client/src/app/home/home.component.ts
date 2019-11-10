@@ -27,7 +27,7 @@ public NewBook = {
     };
 
     this.GetBooks();
-    
+
   }
 
   GetBooks(){
@@ -43,7 +43,13 @@ public NewBook = {
 
     CreateBook(){
       this.auth.CreateBook(this.NewBook).subscribe(
-        ()=> this.GetBooks()
+        ()=> {
+          this.NewBook = {
+            Name : null,
+            Author : null
+          };
+          this.GetBooks();
+        }
       );
     }  
 
