@@ -17,7 +17,7 @@
     "jsonwebtoken": "^5.0.4",
     "method-override": "^3.0.0",
     "mongoose": "^4.1.2",
-    "morgan": "~1.5.1",
+    "morgan": "~1.9.1",
     "request": "^2.88.0",
     "serve-favicon": "~2.2.0",
     "typescript": "~2.6.2"
