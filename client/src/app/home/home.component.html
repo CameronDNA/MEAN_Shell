@@ -1,0 +1,75 @@
+<h1 class="HeaderPager">MEAN Shell</h1>
+
+<div class="container">
+    <div class="BookInputBox">
+        <form (submit)="CreateBook()" #Booksform="ngForm">
+            <div class="form-group">
+              <label>Add a new Book</label>
+
+              <mat-form-field>
+                <input type="text" matInput
+                       [(ngModel)]="NewBook.Name"
+                       name="Name"
+                       id="Name"
+                       required
+                       placeholder="Enter Book Name">
+              </mat-form-field>
+            </div>
+        
+            <div class="form-group">
+              <mat-form-field>
+                <input type="text"
+                [(ngModel)]="NewBook.Author"
+                id="Author"
+                name="Author"
+                placeholder="Enter Author"
+                matInput
+                required
+                >
+              </mat-form-field>
+            </div>
+    
+            <button type="submit" mat-flat-button color="primary" [disabled]="!Booksform.valid" class="InputButton">Create Book</button>
+    
+          </form>
+    </div>
+    
+    <div class="dataTable">
+        <ng-data-table
+            [items]="Books"
+            [title]="'Books'"
+            [showHeader]="true"
+            [showIndexColumn]="true"
+            [indexColumnWidth]="40"
+            [pageable]="true"
+            [limit]="50"
+            [contentHeight]="300"
+            [showColumnSelector]="true"
+            [persistTableState]="true"
+            [minHeight]="400"
+            [minWidth]="500"
+            >
+            <ng-data-table-column 
+                [field]="'Author'"
+                [title]="'Author'"
+                [resizable]="true"
+                [filterable]="true"
+                [filterPlaceholder]="'Search'"
+                [sortable]="true"
+                [showInColumnSelector]="true"
+            >
+            </ng-data-table-column>
+            <ng-data-table-column 
+                [field]="'Name'"
+                [title]="'Name'"
+                [resizable]="true"
+                [filterable]="true"
+                [filterPlaceholder]="'Search'"
+                [sortable]="true"
+                [showInColumnSelector]="true"
+            >
+            </ng-data-table-column>
+        </ng-data-table>
+    </div>
+</div>
+
