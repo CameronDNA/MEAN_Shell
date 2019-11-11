@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 /* Get All Books */
 router.get('/Books', function(req, res, next){
-  Books.find(function(err, post){
+  Books.find({DeletedDate : null},function(err, post){
       if (err){
          res.send(err);
       } else {
