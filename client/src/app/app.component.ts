@@ -1,5 +1,4 @@
 import { Component, ViewChild, AfterViewInit  } from '@angular/core';
-import { AuthenticationService } from './authentication.service';
 import {Observable} from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -14,7 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class AppComponent {
 
-  constructor(public auth: AuthenticationService, private router: Router, private route: ActivatedRoute ) {}
+  constructor(private router: Router, private route: ActivatedRoute ) {}
 
   ngOnInit() {
 

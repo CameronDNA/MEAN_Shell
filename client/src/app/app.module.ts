@@ -7,14 +7,12 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { DataTableModule } from 'ornamentum';
 import { HomeComponent } from './home/home.component';
-import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
 import {HttpModule} from '@angular/http';
-import {MaterialDesign} from "./material.module";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent ,runGuardsAndResolvers: 'always' }
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({
@@ -28,7 +26,6 @@ const routes: Routes = [
     FormsModule,
     HttpModule,
     CommonModule,
-    MaterialDesign,
     BrowserAnimationsModule,
     HttpClientModule,
     DataTableModule.forRoot(),
@@ -37,7 +34,6 @@ const routes: Routes = [
   exports:[
   ],
   providers: [
-    AuthenticationService,
     AuthGuardService,
     HttpClientModule
   ],

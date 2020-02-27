@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-var mongoose = require('./api/models/db');
 var routesApi = require('./api/routes/index');
 var app = express();
 const _ = require('lodash');
