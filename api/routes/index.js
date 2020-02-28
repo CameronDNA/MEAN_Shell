@@ -5,7 +5,8 @@ var request = require('request');
 router.get('/Trakt', function(req, res, next) {
   const type = "code";
   const clientId = '';
-  const authUrl = `https://trakt.tv/oauth/authorize?response_type=${type}&client_id=${clientId}`;
+  const redirect = '';
+  const authUrl = `https://trakt.tv/oauth/authorize?response_type=${type}&client_id=${clientId}&redirect_uri=${redirect};`;
   request(authUrl,
   {
     'Content-Type': 'application/json'

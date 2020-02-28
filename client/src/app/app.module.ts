@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuardService } from './auth-guard.service';
 import {HttpModule} from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AuthenticationService } from './AuthenticationService.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -35,7 +36,8 @@ const routes: Routes = [
   ],
   providers: [
     AuthGuardService,
-    HttpClientModule
+    HttpClientModule,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })
